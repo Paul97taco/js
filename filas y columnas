@@ -1,0 +1,54 @@
+<! DOCTYPE html>
+<html lang = "es">
+
+<head>
+    <meta charset = "UTF-8">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
+    <meta http-equiv = "Compatible con X-UA" contenido = "ie = borde">
+    <title> Matrices </title>
+</head>
+
+<body>
+
+    <div class = "">
+
+        <span class = "label label-default"> Filas </span>
+
+        <input type = "text" id = "1filas">
+
+        <br>
+
+        <br>
+
+        <span class = "label label-default"> Columnas </span>
+
+        <input type = "text" id = "2columnas">
+
+        <button type = "button" name = "button" onclick = "grafica ()"> Generar tablita UwU </button>
+
+    </div>
+
+    <div class = "" id = "genera">
+
+
+    </div>
+</body>
+<script src = "../ matrices"> </script>
+<script>
+    funcion grafica () {
+        var generarf_c = "<table> <tbody>";
+        var Numfilas = parseInt (document.getElementById ("1filas"). value);
+        var Numcolumnas = parseInt (document.getElementById ("2columnas"). value);
+        para (sea x = 0; x <Numfilas; x ++) {
+            generarf_c + = "<tr>"
+            para (sea i = 0; i <Numcolumnas; i ++) {
+                generarf_c + = "<td>" + x + "," + i + "</td>"
+            }
+            generarf_c + = "</tr>"
+        }
+        generarf_c + = "</tbody> </table>"
+        document.getElementById ("genera"). innerHTML = generarf_c;
+    }
+</script>
+
+</html>
